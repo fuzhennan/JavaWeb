@@ -43,7 +43,7 @@
                     //兼容大部分浏览器
                     obj.addEventListener(eventStr,callback,false);
                 } else{
-                    //兼容IE8及以下
+                    //兼容IE8.0及以下
                     obj.attachEvent("on"+eventStr,function () {
                         //把this变成该obj调用而不是window
                         callback.call(obj);
