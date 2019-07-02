@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json</title>
+
+</head>
+<body>
+<h1>为json字符串创建对象</h1>
+<p id="demo"></p>
+<script>
+    var text = '{ "sites" : [' +
+        '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+        '{ "name":"Google" , "url":"www.google.com" },' +
+        '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+
+    // JSON.parse() 用于将一个JSON字符串转换为JavaScript对象
+    // JSON.stringify() 用于将JavaScript对象转换为JSON字符串
+    obj=JSON.parse(text);
+    document.getElementById("demo").innerHTML=obj.sites[1].name+""+obj.sites[1].url;
+</script>
+
+</body>
+</html>

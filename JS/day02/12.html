@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用工厂方法创建对象</title>
+    <script>
+        function creatPerson(name,age,gender) {
+            var obj={};
+            obj.name=name;
+            obj.age=age;
+            obj.gender=gender;
+            obj.sayName=function () {
+                alert(this.name);
+            };
+            return obj;
+        }
+        var obj2=creatPerson("沙和尚",18,"男");
+        obj2.sayName();
+        var obj3=creatPerson("白骨精",16,"女");
+        obj3.sayName();
+
+        console.log(obj2);
+        console.log(obj3);
+
+
+        function creatDog(name,age) {
+            var obj={};
+            obj.name=name;
+            obj.age=age;
+            obj.sayName=function () {
+                alert("汪汪汪");
+            };
+            return obj;
+        }
+
+        var dog=creatDog("旺财",5);
+        dog.sayName();
+        console.log(dog);
+
+        /*
+        使用工厂方法创建对象，使用的构造函数都是Object,不能区分不同类型的对象
+        所以需要用到13.html中的构造函数方法创建对象。
+         */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

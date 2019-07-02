@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+</head>
+<body>
+<p>局部变量在声明的函数外不可访问</p>
+<p id="demo"></p>
+<script>
+    myFunction();
+    document.getElementById("demo").innerHTML="carName的类型为："+typeof carName;
+    function myFunction() {
+       var carName="fuzhennan";
+       carName3="tudouyy";
+    }
+</script>
+<p>全局变量在任何脚本和函数外都可访问</p>
+<p id="demo2"></p>
+<script>
+    var carName2="fzn";
+    myFunction2();
+    function myFunction2() {
+        document.getElementById("demo2").innerHTML="我可以显示"+carName2+" , "+carName3;
+    }
+</script>
+
+<!--
+    如果变量在函数内没有声明（没有使用var关键字），该变量为全局变量。如carName3.
+
+-->
+</body>
+</html>

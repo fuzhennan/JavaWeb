@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数方法</title>
+    <script>
+        //call()  apply()
+        function fun() {
+            alert("hello");
+        }
+
+        fun();//this永远是window
+
+        //this指定谁就是谁
+        fun.apply();
+        fun.call();
+
+        function fun1() {
+            alert(this.name);
+        }
+
+        var obj={name:"obj"};
+        fun1.apply(obj);
+
+        var obj2={name:"obj2"};
+        fun1.call(obj2);
+
+
+
+        var obj3={
+            name:"obj3",
+            sayName:function () {
+                alert(this.name);
+            }
+        };
+
+        obj3.sayName.apply(obj2);//obj2,参数是谁this就是谁
+
+
+        function fun2(a,b) {
+            console.log("a="+a);
+            console.log("b="+b);
+        }
+
+        fun2.call(obj,2,3);//a=2,b=3 call()方法可以将实参在对象之后依次传递
+        fun2.apply(obj,[2,3]);//a=2,b=3 apply()方法需要将实参封装到一个数组中统一传递
+    </script>
+</head>
+<body>
+
+</body>
+</html>

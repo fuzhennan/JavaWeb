@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随鼠标移动的方块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+
+    <script>
+       window.onload=function () {
+           var box1=document.getElementById("box1");
+
+            document.onmousemove=function (event) {//移动事件绑定给document
+
+
+                event=event||window.event;//解决兼容性问题
+
+                /*
+                clientX 和 clientY 是相对于可见区域的
+                而div是相对于整个页面的
+                pageX 和pageY 是相对于整个页面的，但是不兼容IE8
+                 */
+                var x=event.clientX;
+                var y=event.clientY;
+
+                /*
+                chorme认为浏览器的滚动条是body的，可以通过body.scrollTop获取
+                而其它浏览器认为滚动条是html的，
+                 */
+                var st=document.body.scrollTop||document.documentElement.scrollTop;
+                var sl=document.body.scrollLeft||document.documentElement.scrollLeft;
+
+                box1.style.left=x+sl+"px";
+                box1.style.top=y+st+"px";
+
+                var cancelBubble=document.getElementById("box2");
+                cancelBubble.onmousemove=function (event) {
+                    event.cancelBubble=true;
+                }
+            };
+
+       }
+    </script>
+</head>
+<body style="height: 1000px">
+    <div id="box1"></div>
+    <div id="box2" style="width: 500px;height: 500px;background-color: #00bcd4">我是取消冒泡的区域，别试了，你进不来的</div>
+</body>
+</html>

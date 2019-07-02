@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+</head>
+<body>
+<h1>JavaScript验证输入</h1>
+<p>请输入1到10之间的数字：</p>
+<input id="num">
+<button type="button" onclick="myFunction()">提交</button>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var x,text;
+        x=document.getElementById("num").value;
+        if (x<1||x>10||isNaN(x)){
+            text="请输入符合要求的数";
+        } else {
+            text="输入正确";
+        }
+        document.getElementById("demo").innerHTML=text;
+    }
+</script>
+</body>
+</html>

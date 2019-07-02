@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件对象</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #areaDiv{
+            height: 200px;
+            width: 400px;
+            border:1px solid black;
+            margin: 50px auto;
+        }
+
+        #showMsg{
+            height: 100px;
+            width: 400px;
+            border:1px solid black ;
+            margin: 50px auto;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var area=document.getElementById("areaDiv");
+            var show=document.getElementById("showMsg");
+
+            area.onmousemove=function (event) {
+
+                /*
+                在IE8及一下浏览器，响应函数被触发时，浏览器不会传递事件对象，是将事件对象作为window对象的属性保存的
+                 */
+
+                // if (!event){
+                //     event=window.event;
+                // }
+
+                //解决事件对象的兼容性
+                event=event||window.event;
+
+                var x=event.clientX;
+                var y=event.clientY;
+
+                show.innerHTML="x= "+x+"y= "+y;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="areaDiv"></div>
+    <div id="showMsg"></div>
+</body>
+</html>

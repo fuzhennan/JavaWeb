@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断是否是质数</title>
+</head>
+<body>
+<script>
+    var num=prompt("请输入一个大于1的整数！");
+    var flag=true;
+    //小于等于1或者不是整数
+    if (num<=1||num%1!==0){
+        alert("该值不合法！")
+    }else {
+        for (var i=2;i<num;i++){
+            if (num%i===0) {
+                flag=false;
+            }
+        }
+        if (flag){
+            alert(num+"是质数！")
+        } else {
+            alert(num+"不是质数！！")
+        }
+
+    }
+
+</script>
+</body>
+</html>

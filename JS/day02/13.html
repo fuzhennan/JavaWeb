@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用构造函数创建对象</title>
+
+    <script>
+        /*
+        构造函数执行流程
+         1.立刻创建一个新的对象
+         2.将新的对象设置为函数中的this，在构造函数中可以使用this来引用新建的对象
+         3.逐行执行函数中的代码
+         4.将新建的对象作为返回值返回
+         */
+
+        /*
+        this的情况
+         1.当以函数的形式调用时，this是window
+         2.当以方法的形式调用时，谁调用方法this就是谁
+         3.当以构造函数的形式调用时，this就是新创建的那个对象
+         */
+
+        /*
+        将公共方法统一添加到构造函数的原型里
+         */
+        Person.prototype.sayName=function(){
+            alert(this.name);
+        };
+
+        function Person(name,age,gender) {
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+            // this.sayName=fun;
+        }
+
+        var per=new Person("孙悟空",18,"man");
+        var per2=new Person("猪八戒",18,"man");
+        per.sayName();
+        per2.sayName();
+        // console.log(per.sayName==per2.sayName);
+
+        console.log(per);
+
+        function Dog(name,age) {
+            this.name=name;
+            this.age=age;
+            // this.sayName=fun;
+        }
+
+        var dog=new Dog("旺财",5);
+        dog.sayName();
+        console.log(dog);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

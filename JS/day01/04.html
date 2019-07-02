@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数</title>
+    <script type="text/javascript">
+        //js大小写敏感，关键词function必须小写，并且必须以与函数名相同的大小写来调用它
+        function myFunction() {
+            alert("Helloworld");
+        }
+
+        function myFunction(name,job) {
+            alert("Welcome "+name+",the "+job);
+        }
+
+        function hasValueFunction(a,b) {
+            return a*b;
+        }
+
+    </script>
+</head>
+<body>
+<button onclick="myFunction()">点我</button>
+<p>点这个按钮，来调用带参数的js函数</p>
+<button onclick="myFunction('fuzhennan','Java')">点这里</button>
+<p>4*3=</p>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML=hasValueFunction(4,3);
+</script>
+</body>
+</html>

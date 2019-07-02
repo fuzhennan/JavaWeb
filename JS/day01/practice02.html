@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乘法表</title>
+    <style>
+        span{
+            width: 80px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<script>
+    for (var i=1;i<=9;i++){
+        for (var j=1;j<=i;j++){
+            document.write("<span>"+j+"*"+i+"="+i*j+"</span>");
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>强制类型转换至Boolean</title>
+</head>
+<body>
+<script>
+    var a=0;//false
+    var a=Infinity;//true
+    var a=NaN;//false
+    a=Boolean(a);
+
+    console.log(typeof a);
+    console.log(a);
+
+    /*
+    1.数字转布尔：
+    除了0和NaN是false，其它都是true
+
+    2.字符串转布尔：                          /
+    除了空串""是false，其他都是true
+
+    3.ull和undefined都是false
+
+    4.对象也会转换为true
+     */
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的冒泡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+        #span1{
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        window.onload=function () {
+            /*
+            事件的冒泡就是事件的向上传导，当后代元素上的事件被触发时，其祖先元素的相同时间也会被触发
+            在大部分情况下冒泡事件都是有益的，如果不希望发生可以通过事件对象去除
+             */
+            var div=document.getElementById("box1");
+            var span=document.getElementById("span1");
+
+            div.onclick=function (event) {
+                event.cancelBubble=true;
+                alert("我是div")
+            };
+
+            span.onclick=function (event) {
+                event.cancelBubble=true;
+                alert("我是span")
+            };
+
+            document.body.onclick=function () {
+                alert("我是body")
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <span id="span1">我是span</span>
+    </div>
+</body>
+</html>

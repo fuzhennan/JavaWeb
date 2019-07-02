@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for/in循环</title>
+</head>
+<body>
+<p>点击下方按钮，循环遍历对象person的属性</p>
+<button onclick="forIn()">点这里</button>
+<p id="demo"></p>
+<script>
+    function forIn() {
+        var x;
+        var txt="";
+        var person={fName:"Bill",lName:"Gates",age:56};
+        for (x in person){
+            txt=txt+person[x];
+        }
+        document.getElementById("demo").innerHTML=txt;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型对象</title>
+    <script>
+        function MyClass() {
+
+        }
+
+        MyClass.prototype.name="我是原型中的名字";
+        var mc=new MyClass();
+        console.log(mc.name);
+
+        //使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有也会返回true
+        console.log("name" in mc);//true
+
+        //检查当前对象的原型中是否有某个属性
+        console.log(mc.hasOwnProperty("name"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

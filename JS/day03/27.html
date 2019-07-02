@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom增小练习</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding:0;
+        }
+
+        #hero{
+            margin: 50px auto;
+        }
+        table,td,tr,th{
+            border:solid 1px black;
+        }
+
+        #formDiv{
+            text-align: center;
+        }
+        .choose{
+            margin: 0 auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function delA(){
+            var tr=this.parentNode.parentNode;//获取a元素的爷爷，即当前的tr
+            var name=tr.getElementsByTagName("td")[0].innerHTML;//获取当前tr的第一个td，即name
+            var flag=confirm("确定要禁选"+name+"吗？");
+            if (flag){
+                tr.parentNode.removeChild(tr);//自删
+            }
+        }
+        window.onload=function () {
+            var allA = document.getElementsByTagName("a");//获取所有的超链接
+            for (var i = 0; i < allA.length; i++) {
+                allA[i].onclick = delA;
+                {//为所有a元素绑定单击事件
+                }
+                var ok = document.getElementById("ok");
+                ok.onclick = function () {
+                    var name = document.getElementById("HeroName").value;
+                    var position = document.getElementById("position").value;
+                    var skills = document.getElementById("skills").value;
+
+                    var tr = document.createElement("tr");
+
+                    tr.innerHTML = "<td>" + name + "</td>" +
+                        "<td>" + position + "</td>" +
+                        "<td>" + skills + "</td>" +
+                        "<td><a href='#'>ban</a></td>";
+                    var table = document.getElementById("hero");
+                    var tbody = table.getElementsByTagName("tbody")[0];
+                    tbody.appendChild(tr);
+
+                    var a = tr.getElementsByTagName("a")[0];
+                    a.onclick = delA;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="ban">
+    <table id="hero">
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Skills</th>
+            <th>banner</th>
+        </tr>
+        <tr>
+            <td>提莫</td>
+            <td>上单</td>
+            <td>闪现，点燃</td>
+            <td><a href="#">ban</a></td>
+        </tr>
+        <tr>
+            <td>铁男</td>
+            <td>上单</td>
+            <td>闪现，传送</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>亚索</td>
+            <td>中单</td>
+            <td>闪现，点燃</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>莫甘娜</td>
+            <td>中单</td>
+            <td>闪现，点燃</td>
+            <td><a href="#">ban</a></td>
+        </tr>
+        <tr>
+            <td>李青</td>
+            <td>打野</td>
+            <td>闪现，惩戒</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>蜘蛛</td>
+            <td>打野</td>
+            <td>闪现，惩戒</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>VN</td>
+            <td>ADC</td>
+            <td>闪现，治疗</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>露露</td>
+            <td>辅助</td>
+            <td>闪现，点燃</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>德莱文</td>
+            <td>ADC</td>
+            <td>闪现，治疗</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+        <tr>
+            <td>锤石</td>
+            <td>辅助</td>
+            <td>闪现，点燃</td>
+            <td><a href="#">ban</a></td>
+
+        </tr>
+    </table>
+</div>
+
+<div id="formDiv">
+    <h4>选择英雄</h4>
+
+    <table class="choose">
+        <tr>
+            <td class="word">name:</td>
+            <td class="inp">
+                <input type="text" name="HeroName" id="HeroName"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="position">position:</td>
+            <td class="inp">
+                <input type="text" name="position" id="position">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="skills">skills:</td>
+            <td class="inp">
+                <input type="text" name="skills" id="skills">
+            </td>
+        </tr>
+    </table>
+    <input type="button" name="ok"  id="ok" value="确定">
+</div>
+</body>
+</html>

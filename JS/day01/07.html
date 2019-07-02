@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML事件</title>
+</head>
+<body>
+<!--
+    HTML事件的实例：
+        1.HTML页面完成加载时；
+        2.HTML input字段改变时；
+        3.HTML按钮被单击时。
+-->
+<button onclick="this.innerHTML=Date()">现在的时间是？</button>
+
+<p>点击按钮将执行dispalyDate（）函数</p>
+<button onclick="displayDate()">点这里</button>
+<script>
+    function displayDate() {
+        document.getElementById("demo").innerHTML=Date();
+    }
+</script>
+<p id="demo"></p>
+</body>
+</html>

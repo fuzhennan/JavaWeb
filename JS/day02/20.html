@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+    <script>
+        /*
+        在调用函数时，浏览器每次都会传递进两个隐含参数
+         1.函数的上下文this
+         2.封装实参的对象arguments
+           -他不是数组，是一个类数组对象，他也可以通过索引来操作数据，也可以获取长度
+           在调用函数时，我们所传递的实参都会在arguments中保存
+
+           arguments.callee(),这个属性对应一个函数对象，就是当前正在指向的函数对象
+         */
+        function f() {
+            console.log(arguments instanceof Array);//false
+            console.log(Array.isArray(arguments));//false
+            console.log(arguments.length);
+            console.log(arguments[1]);//true
+            console.log(arguments.callee==f);//true
+        }
+
+        f("hello",true);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

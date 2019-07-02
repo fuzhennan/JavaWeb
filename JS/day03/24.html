@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换练习</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer{
+            width: 360px;
+            text-align: center;
+            margin: 300px auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload=function () {
+            var prev=document.getElementById("prev");
+            var next=document.getElementById("next");
+            var img=document.getElementsByTagName("img")[0];//只有一个img，返回的是数组对象，就直接【0】
+            var imgArr=["../img/642.gif","../img/643.gif","../img/644.gif","../img/645.gif","../img/646.gif"];
+            var info=document.getElementById("info");
+            var index=0;
+            info.innerHTML="一共有 "+imgArr.length+" 张图片，当前是第 "+(index+1)+" 张图！";
+
+            prev.onclick=function (){
+                index--;
+                if (index<0){
+                    index=imgArr.length-1;
+                }
+                info.innerHTML="一共有 "+imgArr.length+"张图片，当前是第 "+(index+1)+"张图！";
+                img.src=imgArr[index];
+
+            };
+
+            next.onclick=function () {
+                index++;
+                if (index>4){
+                    index=0;
+                }
+                info.innerHTML="一共有 "+imgArr.length+" 张图片，当前是第 "+(index+1)+" 张图！";
+                img.src=imgArr[index];
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <p id="info"></p>
+        <img src="../img/642.gif" alt="复仇者联盟4"/>
+        <button id="prev">上一张</button>
+        <button id="next">下一张</button>
+    </div>
+</body>
+</html>

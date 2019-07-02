@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom增</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var par=document.createElement("p");//创建元素
+            var Node=document.createTextNode("增加的段落");//创建元素节点
+            par.appendChild(Node);//添加到该元素
+            document.getElementById("div1").appendChild(par);//追加到已有元素上
+        };
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">第一个段落</p>
+        <p id="p2">第二个段落</p>
+    </div>
+</body>
+</html>
