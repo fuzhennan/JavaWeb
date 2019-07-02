@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的绑定</title>
+    <script>
+        window.onload=function () {
+            var btn=document.getElementById("btn");
+            var btn2=document.getElementById("btn2");
+            var btn3=document.getElementById("btn3");
+
+            /*
+            addEventListener(eventStr,callback,boolean)
+            先绑定，后执行，多个绑定时队列方式执行
+            参数：1:事件字符串，不要on
+                  2：callback，回调函数，
+                  3：是否在捕获阶段触发事件，return boolean，一般传false
+                  this指向当前函数
+                  不支持IE8及以下
+             */
+            btn.addEventListener("click",function () {
+                alert("addEventListener()")
+            },false);
+
+            /*
+            attachEvent(eventStr,callback)
+            先执行后绑定，多个绑定时栈的方式执行
+            参数：1：事件字符串，要on
+                  2：callback，回调函数
+                  this指向window
+                  IE5.0-IE10.0
+             */
+            btn2.attachEvent("onclick",function () {
+                alert("attachEvent")
+            });
+
+            bind(btn3,"click",function () {
+                alert("bind")
+            });
+
+            function bind(obj,eventStr,callback) {
+                if (obj.addEventListener){
+                    //兼容大部分浏览器
+                    obj.addEventListener(eventStr,callback,false);
+                } else{
+                    //兼容IE8及以下
+                    obj.attachEvent("on"+eventStr,function () {
+                        //把this变成该obj调用而不是window
+                        callback.call(obj);
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">点我(addEventListener)</button>
+    <button id="btn2">点我(attachEvent)</button>
+    <button id="btn3">点我(bind)</button>
+</body>
+</html>
