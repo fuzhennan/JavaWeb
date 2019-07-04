@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标的拖拽</title>
+    <style>
+        #box1{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: absolute;
+        }
+
+        #box2{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+        }
+    </style>
+
+    <script>
+        window.onload=function () {
+            /*
+            拖拽的逻辑实现
+            1.当鼠标在被拖拽元素上按下时，开始拖拽，onmousedown()
+            2.当鼠标移动时，被拖拽元素跟随鼠标移动，onmousemove()
+            3.当鼠标松开时，被拖拽元素固定在当前位置，onmouseup()
+             */
+
+            var box1=document.getElementById("box1");
+
+            box1.onmousedown=function(event){//当鼠标按下
+                    event=event||window.event;
+                //当鼠标按下，div的水平偏移量=鼠标.clientX-元素.offsetLeft；
+                //            div的垂直偏移量=鼠标.clientY-元素.offsetTop；
+
+                var ol=event.clientX-box1.offsetLeft;
+                var ot=event.clientY-box1.offsetTop;
+
+                document.onmousemove=function (event) {//鼠标开始移动
+                    event=event||window.event;
+
+                    var left=event.clientX-ol;
+                    var top=event.clientY-ot;
+
+                    box1.style.left=left+"px";
+                    box1.style.top=top+"px";
+                };
+
+                document.onmouseup=function () {//当鼠标松开
+                    document.onmousemove=null;//取消document的move事件
+                    document.onmouseup=null;//onmouseup没有存在意义，因此也取消该事件
+                };
+                /*
+                当我们拖拽一个网页中的内容时，浏览器会默认去搜索引擎中的内容
+                此时会导致拖拽功能的异常，这个是浏览器提供的默认行为
+                return false 可以取消默认行为
+                但是不兼容IE8
+                 */
+                return false;
+            };
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>
