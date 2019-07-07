@@ -14,37 +14,52 @@
 
     <script>
         window.onload=function () {
-            //为document绑定一个键盘按下事件
-            document.onkeydown=function (event) {
-                event=event||window.event;
-                var box1=document.getElementById("box1");
-                var speed=10;
 
-                //当用户按下ctrl键加速
-                if (event.ctrlKey) {
-                    speed=50;
-                }
+            var speed=10;
+
+            var dir=0;
+
+            setInterval(function () {
                 /*
                 左37
                 上38
                 右39
                 下40
                  */
-
-                switch (event.keyCode) {
-                        //向左
+                var box1=document.getElementById("box1");
+                switch (dir) {
+                    //向左
                     case 37:box1.style.left=box1.offsetLeft-speed+"px";
                         break;
-                        //向上
+                    //向上
                     case 38:box1.style.top=box1.offsetTop-speed+"px";
                         break;
-                        //向右
+                    //向右
                     case 39:box1.style.left=box1.offsetLeft+speed+"px";
                         break;
-                        //向下
+                    //向下
                     case 40:box1.style.top=box1.offsetTop+speed+"px";
                         break;
                 }
+            },30);
+
+            //为document绑定一个键盘按下事件
+            document.onkeydown=function (event) {
+                event=event||window.event;
+
+                //当用户按下ctrl键加速
+                if (event.ctrlKey) {
+                    speed=50;
+                }else {
+                    speed=10;
+                }
+
+                dir=event.keyCode;
+
+                document.onkeyup=function () {
+                    dir=0;
+                }
+
             }
         }
     </script>
