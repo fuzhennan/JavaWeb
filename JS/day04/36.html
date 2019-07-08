@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器应用1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+
+        .line{
+            width: 0;
+            height: 1000px;
+            position: absolute;
+            border-left: 1px solid black;
+            left: 1000px;
+            top: 0;
+        }
+
+    </style>
+    <script>
+        window.onload=function () {
+            var box1=document.getElementById("box1");
+            var button=document.getElementById("button");
+            var button02=document.getElementById("button02");
+
+            var timer;
+            button.onclick=function () {
+                move(box1,900,10);
+            };
+
+            button02.onclick=function () {
+                move(box1,0,10)
+            };
+
+
+            /*
+            参数：
+            obj：要执行动画的对象
+            target：执行动画的目标位置，如向右900，向左0
+            speed：移动速度
+             */
+            function move(obj,target,speed) {
+                clearInterval(timer);
+
+                //获取元素当前位置，如果大于目标位置，则为向左移动，速度取反
+                var current=parseInt(getStyle(obj,"left"));
+                if (current>target){
+                    speed=-speed;
+                }
+
+
+                timer=setInterval(function () {
+                    //取元素初始left值
+                    var oldValue= parseInt(getStyle(obj, "left"));
+                    var newValue=oldValue+speed;
+
+                    if ((newValue>target&&speed>0)||(newValue<target&&speed<0)){
+                        newValue=target;
+                    }
+
+                    if (newValue===target){
+                        clearInterval(timer);
+                    }
+
+                    obj.style.left=newValue+"px";
+                },30)
+            }
+
+            function getStyle(obj,name) {
+                if (window.getComputedStyle){
+                    //正常浏览器方式，有该方法
+                    return getComputedStyle(obj,null)[name];
+                } else {
+                    //IE8的方式，没有该方法
+                    return obj.currentStyle[name];
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button">点我开始向右移动</button>
+    <button id="button02">点我开始向左移动</button>
+    <div id="box1"></div>
+    <div class="line"></div>
+</body>
+</html>
