@@ -1,4 +1,4 @@
-function move(obj,attr,target,speed,callable) {
+function move(obj,attr,target,speed,callback) {
     clearInterval(obj.timer);
 
     //获取元素当前位置，如果大于目标位置，则为向左移动，速度取反
@@ -19,7 +19,7 @@ function move(obj,attr,target,speed,callable) {
 
         if (newValue===target){
             clearInterval(obj.timer);
-            callable&&callable();
+            callback && callback();
         }
 
         obj.style[attr]=newValue+"px";

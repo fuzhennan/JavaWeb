@@ -83,12 +83,12 @@
             /*点击链接切换到指定的图片*/
             for(var i=0;i<allA.length;i++){
                 allA[i].num=i;
+
                 allA[i].onclick=function () {
+                    clearInterval(timer);
                     //获取点击超链接的索引
                     //alert(i); 如果没有84行语句， 输出5 因为先执行for循环，在绑定函数,所以i为5
-
                     index=this.num;
-
                     /* 切换图片
                               index    left
                       第一张    0       0
@@ -98,18 +98,15 @@
                     // imgList.style.left=-426*index+"px";
                     setA();
                     move(imgList,"left",-426*index,20,function () {
-                        
+                        autoChange();
                     });
+
                 }
             }
             autoChange();
             //创建一个方法，用来设置当前选中的超链接a
             function setA() {
 
-                if (index>=imgArr.length-1){
-                    index=0;
-                    imgList.style.left=0;
-                }
                 //遍历所有的a，并将所有背景颜色设置为red
                 for (var i=0;i<allA.length;i++){
                     //由于内联样式优先级最高，不能直接设置为red，设置为空字符串就行，默认就是red
@@ -118,9 +115,11 @@
                 allA[index].style.backgroundColor="black";
             }
 
+            var timer;
+
             function autoChange() {
 
-                setInterval(function () {
+                timer=setInterval(function () {
                     //索引自增
                     index++;
                     index %= imgArr.length;
@@ -139,9 +138,8 @@
             <li><img src="../img/642.gif" alt=""/></li>
             <li><img src="../img/643.gif" alt=""/></li>
             <li><img src="../img/644.gif" alt=""/></li>
-            <li><img src="../img/645.gif" alt=""></li>
+            <li><img src="../img/645.gif" alt=""/></li>
             <li><img src="../img/646.gif" alt=""/></li>
-            <li><img src="../img/642.gif" alt=""/></li>
         </ul>
         <div id="navDiv">
             <a href="javascript:;"></a>
