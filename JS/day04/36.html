@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>定时器应用1</title>
+    <title>定时器应用</title>
     <style>
         *{
             margin: 0;
@@ -14,6 +14,15 @@
             background-color: red;
             position: absolute;
             left: 0;
+        }
+
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            top: 200px;
         }
 
         .line{
@@ -29,38 +38,53 @@
     <script>
         window.onload=function () {
             var box1=document.getElementById("box1");
+            var box2=document.getElementById("box2");
             var button=document.getElementById("button");
             var button02=document.getElementById("button02");
+            var button03=document.getElementById("button03");
+            var button04=document.getElementById("button04");
+            var button05=document.getElementById("button05");
 
-            var timer;
             button.onclick=function () {
-                move(box1,900,10);
+                move(box1,"left",900,10);
             };
 
             button02.onclick=function () {
-                move(box1,0,10)
+                move(box1,"left",0,10)
             };
 
+            button03.onclick=function () {
+                move(box2,"left",900,20)
+            };
+
+            button04.onclick=function () {
+                move(box2,"width",1000,20)
+            };
+
+            button05.onclick=function () {
+                move(box2,"top",500,20)
+            };
 
             /*
             参数：
             obj：要执行动画的对象
+            attr:改变当前对象的样式，如top。left，width，height
             target：执行动画的目标位置，如向右900，向左0
             speed：移动速度
              */
-            function move(obj,target,speed) {
-                clearInterval(timer);
+            function move(obj,attr,target,speed) {
+                clearInterval(obj.timer);
 
                 //获取元素当前位置，如果大于目标位置，则为向左移动，速度取反
-                var current=parseInt(getStyle(obj,"left"));
+                var current=parseInt(getStyle(obj,attr));
                 if (current>target){
                     speed=-speed;
                 }
 
 
-                timer=setInterval(function () {
-                    //取元素初始left值
-                    var oldValue= parseInt(getStyle(obj, "left"));
+                obj.timer=setInterval(function () {
+                    //获取元素初始值
+                    var oldValue= parseInt(getStyle(obj, attr));
                     var newValue=oldValue+speed;
 
                     if ((newValue>target&&speed>0)||(newValue<target&&speed<0)){
@@ -68,10 +92,10 @@
                     }
 
                     if (newValue===target){
-                        clearInterval(timer);
+                        clearInterval(obj.timer);
                     }
 
-                    obj.style.left=newValue+"px";
+                    obj.style[attr]=newValue+"px";
                 },30)
             }
 
@@ -88,9 +112,13 @@
     </script>
 </head>
 <body>
-    <button id="button">点我开始向右移动</button>
-    <button id="button02">点我开始向左移动</button>
+    <button id="button">点我box1开始向右移动</button>
+    <button id="button02">点我box1开始向左移动</button>
+    <button id="button03">点我box2开始向右移动</button>
+    <button id="button04">点我box2 width向右变长</button>
+    <button id="button05">点我box2开始向下移动</button>
     <div id="box1"></div>
+    <div id="box2"></div>
     <div class="line"></div>
 </body>
 </html>
