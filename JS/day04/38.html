@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="tools.js"></script>
+    <title>类的操作</title>
+    <style>
+        .b1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .b2{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        .b3{
+            background-color: #ed3073;
+        }
+    </style>
+
+    <script>
+        window.onload=function () {
+            var b1=document.getElementById("b1");
+            var button=document.getElementById("button");
+            var button02=document.getElementById("button02");
+
+            button.onclick=function () {
+                //通过style修改样式属性，每修改一次浏览器就会重新渲染一次，性能差，修改多个时，不方便，js修改css不好
+                // b1.style.width="200px";
+                // b1.style.height="200px";
+                // b1.style.backgroundColor="yellowgreen";
+
+                //通过修改元素的class属性间接修改样式，只需修改一次，同时修改多个样式，
+                // 浏览器只需渲染一次，性能良好，并且可以使表现和行为进一步分离
+                b1.className="b2";
+            };
+
+
+            button02.onclick=function () {
+                // b1.className += " b3"
+                addClass(b1,"b3");
+            };
+
+        };
+
+
+    </script>
+</head>
+<body>
+    <button type="button" id="button">点击改变box1样式</button>
+    <button type="button" id="button02">点击改变box1的背景颜色</button>
+    <div class="b1" id="b1"></div>
+</body>
+</html>

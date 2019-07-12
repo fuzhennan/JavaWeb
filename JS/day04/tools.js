@@ -36,3 +36,50 @@ function getStyle(obj,name) {
         return obj.currentStyle[name];
     }
 }
+
+        /*
+        参数：
+         obj：添加class的对象
+         cn：添加的className
+          */
+function addClass(obj,cn) {
+    if (!hasClass(obj,cn)) {
+        obj.className += " "+cn;
+    }
+}
+
+/*
+参数：
+obj：添加class的对象
+cn：添加的className
+如果有该class，则返回true，反之返回false
+ */
+function hasClass(obj,cn) {
+    //判断obj中有没有cn，class
+    //创建一个正则表达式
+    // var reg=/\bb2\b/;
+
+    var reg=new RegExp("\\b"+cn+"\\b");
+
+    return reg.test(obj.className);
+}
+
+function removeClass(obj,cn) {
+    var reg=new RegExp("\\b"+cn+"\\b");// \b 为结束符
+
+    obj.className=obj.className.replace(reg,"");
+}
+
+/*
+toggleClass可以用来切换一个类
+如果元素当中有该类，则删除
+没有则添加
+ */
+function toggleClass(obj,cn) {
+    //判断obj当中是否有cn
+    if (hasClass(obj,cn)){
+        removeClass(obj,cn);
+    } else{
+        addClass(obj,cn);
+    }
+}
