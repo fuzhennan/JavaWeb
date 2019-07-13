@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89e4e484-2493-4950-886f-8752b4e53196" name="Default Changelist" comment="This is the code I wrote when I practiced JavaWeb.">
-      <change afterPath="$PROJECT_DIR$/.idea/JS.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/37.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day03/22.html" beforeDir="false" afterPath="$PROJECT_DIR$/day03/22.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day04/31.html" beforeDir="false" afterPath="$PROJECT_DIR$/day04/31.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/643.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/643.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JQuery/01-初识jQuery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/39.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day04/sdmenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polo-360/.project" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../polo-360/css/page-index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../polo-360/css/reset.css" beforeDir="false" />
@@ -55,10 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day04/37.html">
+        <entry file="file://$PROJECT_DIR$/JQuery/01-初识jQuery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
+            <state relative-caret-position="156">
+              <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -69,8 +63,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,6 +75,9 @@
     <replaceStrings>
       <replace />
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\JavaWeb\JS\love</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -110,16 +107,21 @@
         <option value="$PROJECT_DIR$/day04/36.html" />
         <option value="$PROJECT_DIR$/day04/31.html" />
         <option value="$PROJECT_DIR$/day03/22.html" />
+        <option value="$PROJECT_DIR$/love/love.html" />
+        <option value="$PROJECT_DIR$/day04/38.html" />
         <option value="$PROJECT_DIR$/day04/tools.js" />
+        <option value="$PROJECT_DIR$/day04/sdmenu.css" />
+        <option value="$PROJECT_DIR$/day04/39.html" />
         <option value="$PROJECT_DIR$/day04/37.html" />
+        <option value="$PROJECT_DIR$/JQuery/01-初识jQuery.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1245" />
-    <option name="height" value="675" />
+    <option name="x" value="-20" />
+    <option name="y" value="157" />
+    <option name="width" value="1639" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,17 +139,13 @@
             <path>
               <item name="JS" type="b2602c69:ProjectViewProjectNode" />
               <item name="JS" type="462c0819:PsiDirectoryNode" />
-              <item name="day03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JS" type="462c0819:PsiDirectoryNode" />
-              <item name="day04" type="462c0819:PsiDirectoryNode" />
+              <item name="JQuery" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,6 +159,9 @@
     <property name="settings.editor.selected.configurable" value="tasks" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\JS\love\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaWeb\JS\img" />
     </key>
@@ -193,7 +193,9 @@
       <workItem from="1562081985750" duration="4006000" />
       <workItem from="1562164419940" duration="7131000" />
       <workItem from="1562509015112" duration="10345000" />
-      <workItem from="1562593093166" duration="7525000" />
+      <workItem from="1562593093166" duration="12137000" />
+      <workItem from="1562688472235" duration="1643000" />
+      <workItem from="1562920041464" duration="7553000" />
     </task>
     <task id="LOCAL-00001" summary="This is the code I wrote when I practiced JavaWeb.">
       <created>1562049709794</created>
@@ -258,17 +260,37 @@
       <option name="project" value="LOCAL" />
       <updated>1562554916718</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="This is the code I wrote when I practiced JavaWeb.">
+      <created>1562601344843</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562601344843</updated>
+    </task>
+    <task id="LOCAL-00011" summary="This is the code I wrote when I practiced JavaWeb.">
+      <created>1562604508294</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562604508294</updated>
+    </task>
+    <task id="LOCAL-00012" summary="This is the code I wrote when I practiced JavaWeb.">
+      <created>1562942183848</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562942183848</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59417000" />
+    <option name="totallyTimeSpent" value="73225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.121532366" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25099075" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -282,7 +304,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.15722379" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.0694051" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,13 +348,6 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3533">
-          <caret line="17791" column="17" selection-start-line="17791" selection-start-column="17" selection-end-line="17791" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -463,17 +478,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17807" column="50" selection-start-line="17807" selection-start-column="50" selection-end-line="17807" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day04/tools.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="300">
+          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/sdmenu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/39.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/38.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/love/love.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="581" column="7" selection-start-line="581" selection-start-column="7" selection-end-line="581" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day04/37.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
+        <state relative-caret-position="450">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQuery/01-初识jQuery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
         </state>
       </provider>
     </entry>
