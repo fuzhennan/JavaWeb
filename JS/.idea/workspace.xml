@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89e4e484-2493-4950-886f-8752b4e53196" name="Default Changelist" comment="This is the code I wrote when I practiced JavaWeb.">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JQuery/01-初识jQuery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/39.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/sdmenu.css" afterDir="false" />
+    <list default="true" id="89e4e484-2493-4950-886f-8752b4e53196" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JQuery/02-jQuery-helloWorld.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/css/page-index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/banner-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/banner/banner01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/bd-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/btn1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/btn2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/fb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/img-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/ins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pic/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pic/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pic/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pic/pic1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pic/pic2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pic/pic3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pointer-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/pointer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/rss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/textarea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/tw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/img/yt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/js/DD_belatedPNG_0.0.8a-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../polo-360/js/DD_belatedPNG_0.0.8a.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,11 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JQuery/01-初识jQuery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="400">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JQuery/02-jQuery-helloWorld.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -114,6 +93,7 @@
         <option value="$PROJECT_DIR$/day04/39.html" />
         <option value="$PROJECT_DIR$/day04/37.html" />
         <option value="$PROJECT_DIR$/JQuery/01-初识jQuery.html" />
+        <option value="$PROJECT_DIR$/JQuery/02-jQuery-helloWorld.html" />
       </list>
     </option>
   </component>
@@ -123,7 +103,9 @@
     <option name="width" value="1639" />
     <option name="height" value="860" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -140,6 +122,15 @@
               <item name="JS" type="b2602c69:ProjectViewProjectNode" />
               <item name="JS" type="462c0819:PsiDirectoryNode" />
               <item name="JQuery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="JS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="jquery-1.12.4" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -195,7 +186,7 @@
       <workItem from="1562509015112" duration="10345000" />
       <workItem from="1562593093166" duration="12137000" />
       <workItem from="1562688472235" duration="1643000" />
-      <workItem from="1562920041464" duration="7553000" />
+      <workItem from="1562920041464" duration="9142000" />
     </task>
     <task id="LOCAL-00001" summary="This is the code I wrote when I practiced JavaWeb.">
       <created>1562049709794</created>
@@ -281,11 +272,32 @@
       <option name="project" value="LOCAL" />
       <updated>1562942183848</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="This is the code I wrote when I practiced JavaWeb.">
+      <created>1563027022724</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563027022724</updated>
+    </task>
+    <task id="LOCAL-00014" summary="This is the code I wrote when I practiced JQuery.">
+      <created>1563027047794</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563027047794</updated>
+    </task>
+    <task id="LOCAL-00015" summary="This is the code I wrote when I practiced JQuery.">
+      <created>1563027090781</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563027090781</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73225000" />
+    <option name="totallyTimeSpent" value="74814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -304,7 +316,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.15722379" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.0694051" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.14305949" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -315,7 +327,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is the code I wrote when I practiced JavaWeb." />
-    <option name="LAST_COMMIT_MESSAGE" value="This is the code I wrote when I practiced JavaWeb." />
+    <MESSAGE value="This is the code I wrote when I practiced JQuery." />
+    <option name="LAST_COMMIT_MESSAGE" value="This is the code I wrote when I practiced JQuery." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/day03/24.css" />
@@ -532,8 +545,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JQuery/01-初识jQuery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="400">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdn.staticfile.org_jquery_1.10.2_jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15000">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQuery/02-jQuery-helloWorld.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
