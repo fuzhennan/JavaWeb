@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $("#hidden").click(function () {
+                $("p").hide();
+            });
+            $("#display").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <p>如果你点击“隐藏按钮”，我将会消失。</p>
+    <button id="hidden">隐藏</button>
+    <button id="display">显示</button>
+
+</body>
+</html>
