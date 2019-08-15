@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: none;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            display: none;
+        }
+
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#fadeIn").click(function () {
+                $(".box1").fadeIn(3000);
+                $(".box2").fadeIn("slow");
+                $(".box3").fadeIn("fast");
+            });
+
+            $("#fadeOut").click(function () {
+                $(".box1").fadeOut(3000);
+                $(".box2").fadeOut("slow");
+                $(".box3").fadeOut("fast");
+            });
+
+            $("#fadeToggle").click(function () {
+                $(".box1").fadeToggle(3000);
+                $(".box2").fadeToggle("slow");
+                $(".box3").fadeToggle("fast");
+            });
+        })
+    </script>
+
+</head>
+<body>
+    <p>以下实例演示了 fadeIn() 使用了不同参数的效果。</p>
+    <button id="fadeIn">点击淡入div元素</button><br><br>
+    <button id="fadeOut">点击淡出div元素</button><br><br>
+    <button id="fadeToggle">fadeToggle方法淡入淡出</button><br><br>
+        <div class="box1"></div><br>
+        <div class="box2"></div><br>
+        <div class="box3"></div>
+
+</body>
+</html>
