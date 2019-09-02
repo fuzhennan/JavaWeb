@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on指令的学习</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- v-on 指令，它用于监听 DOM 事件,如click，submit等-->
+        <input type="button" value="按钮" v-on:click="show">
+
+        <!-- 完整语法 -->
+<!--        <a v-on:click="doSomething"></a>-->
+        <!-- 缩写 -->
+<!--        <a @click="doSomething"></a>-->
+    </div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods:{
+            show:function () {
+                alert("hello")
+            }
+        }
+    })
+</script>
+</body>
+</html>

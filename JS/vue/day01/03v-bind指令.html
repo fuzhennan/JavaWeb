@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>v-bind指令</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 <body>
+    <div id="app">
+<!--        <input type="button" value="按钮" v-bind:title="title">
+            v-bind:  可以简写为：   冒号,v-bind中可以写合法的js表达式
+-->
+        <input type="button" value="按钮" :title="title">
 
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                title:"123",
+            }
+        })
+    </script>
 </body>
 </html>
