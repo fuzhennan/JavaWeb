@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-cloak,v-text,v-html指令</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--放在body中，当网速慢时未加载vue就显示出{{msg}}，所以需要v-cloak设置样式来隐藏-->
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+    <div id="app">
+        <!--使用v-cloak能解决插值表达式闪烁的问题-->
+        <p v-cloak>+++{{msg}}---</p>
+
+        <!--默认v-text是没有闪烁的-->
+        <!--v-text会覆盖元素中原本的内容，但是插值表达式只会替换自己的这个占位符，不会把整个元素的内容清空-->
+        <h4 v-text="msg">=-=-=-=-=-</h4>
+
+        <div>{{msg2}}</div>
+        <div v-text="msg2"></div>
+
+        <div v-html="msg2"></div><!--解析成html语法渲染-->
+    </div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg:'123',
+            msg2:'<h1>qwerdf</h1>'
+        }
+    })
+</script>
+</body>
+</html>

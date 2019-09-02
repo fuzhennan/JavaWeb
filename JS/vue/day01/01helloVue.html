@@ -6,14 +6,15 @@
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 <body>
+<!--mvvm 中的view层-->
     <div id="vue_det">
         <h1>{{message}}</h1>
     </div>
 
     <script>
-        new Vue({
-            el:'#vue_det',
-            data:{
+       var vm =  new Vue({  //mvvm  中的vm，中间调度者，数据双重绑定。
+            el:'#vue_det',//element,通过id绑定来控制
+            data:{  //mvvm 中的m
                 message: "helloVue,I am Fzn."
             }
         })
