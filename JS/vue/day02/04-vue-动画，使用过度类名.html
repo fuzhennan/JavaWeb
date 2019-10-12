@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-动画，使用过度类名</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <!--2.自定义两组样式，来控制transition内部的元素实现动画-->
+    <style>
+        /* v-enter 【这是一个时间点】是进入之前，元素的起始状态，此时还没有开始进入*/
+        /* v-leave-to 【这是一个时间点】是动画离开之后，离开的终止状态，此时元素已经结束了*/
+        /*对于这些在过渡中切换的类名来说，如果你使用一个没有名字的 <transition>，则 v- 是这些类名的默认前缀。
+        如果你使用了 <transition name="my-transition">，那么 v-enter 会替换为 my-transition-enter。*/
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="toggle" @click="flag=!flag">
+    <!--1.使用transition 元素，把需要被动画控制的元素包裹起来-->
+    <transition name="fade">
+        <h3 v-if="flag">这是一个h3</h3>
+    </transition>
+
+</div>
+
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            flag:false
+        },
+        methods:{}
+    })
+</script>
+</body>
+</html>

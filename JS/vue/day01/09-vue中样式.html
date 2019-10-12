@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中设置class类样式，内联样式</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+    <style>
+        .red{
+            color: red;
+        }
+
+        .thin{
+            font-weight: 200;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+
+        .active{
+            letter-spacing: 0.5em;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+    <!--第一种使用方式，直接传递一个数组，注意：这里的class需要使用 v-bind 做数据绑定 -->
+    <h1 :class="['thin','italic']">这是一个很大的h1，大到你无法想象</h1>
+
+    <!--在数组中使用三元表达式 -->
+    <h1 :class="['thin','italic',flag?'active':'']">这是一个很大的h1，大到你无法想象</h1>
+
+    <!--通过对象来代替三元表达式设置类，提高代码可读性-->
+    <h1 :class="['thin','italic',{'active':flag}]">这是一个很大的h1，大到你无法想象</h1>
+
+    <!--直接使用对象-->
+    <h1 :class="{red:flag,italic:false,thin:flag,active:false}">这是一个很大的h1，大到你无法想象</h1>
+
+
+
+    <!--内联样式-->
+    <!--直接在元素上通过:style 的形式书写样式对象-->
+    <h1 :style="{color:'red','font-size':'40px'}">这是内联样式</h1>
+
+    <!--将样式对象定义到data中，并直接引用:style-->
+    <h1 :style="h1StyleObj">这是内联样式</h1>
+
+    <!--将样式对象定义到data中，并直接引用:style-->
+    <h1 :style="h1StyleObj">这是内联样式</h1>
+
+</div>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            flag:true,
+            h1StyleObj:{color:'red','font-size':'40px'}
+        },
+        methods:{}
+    })
+</script>
+</body>
+</html>

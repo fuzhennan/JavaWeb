@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-事件修饰符</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <style>
+        .inner{
+            height: 150px;
+            background-color: #ed3073;
+        }
+    </style>>
+</head>
+
+<body>
+
+<div id="app">
+    <div class="inner" @click="div1Handler">
+    <input type="button" value="戳我" @click.stop="btnHandler"><!--//.stop阻止冒泡-->
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{},
+        methods:{
+            div1Handler(){
+                console.log("div1Handler");
+            },
+            btnHandler(){
+                console.log("btnHandler");
+            }
+        }
+    })
+</script>
+</body>
+</html>

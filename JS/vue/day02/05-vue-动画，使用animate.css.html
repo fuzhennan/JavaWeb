@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-vue-动画，使用animate.css</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="lib/animate.css">
+    <!--入场 bounceIn  离场bounceOut-->
+</head>
+<body>
+<div id="app">
+    <input type="button" value="toggle" @click="flag=!flag">
+    <!--1.使用transition 元素，把需要被动画控制的元素包裹起来-->
+    <transition enter-active-class="bounceIn"
+                leave-active-class="bounceOut"
+                :duration="{enter:600,leave:600}"><!--花费时间：600-->
+        <h3 v-if="flag" class="animated">这是一个h3</h3>
+    </transition>
+</div>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            flag:false
+        },
+        methods:{}
+    })
+</script>
+</body>
+</html>
