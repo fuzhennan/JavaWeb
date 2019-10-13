@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-组件-创建组件的方式3</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<!--在被控制的#app 外面使用template 元素，定义组建的html模板结构-->
+<template id="tmpl">
+    <div>
+        <h1>这是使用template元素在外部定义的组件结构</h1>
+    </div>
+</template>
+
+<template id="tmpl2">
+    <h1>这是私有的login组件</h1>
+</template>
+
+<div id="app"><my-com3></my-com3></div>
+
+<div id="app2"><my-com3></my-com3><login></login></div>
+<script>
+
+    Vue.component('myCom3',{
+        template:'#tmpl'
+    });
+</script>
+
+<script>
+    var vm= new Vue({
+        el:"#app",
+        data:{},
+        methods:{}
+    });
+    var vm= new Vue({
+        el:"#app2",
+        data:{},
+        methods:{},
+        components:{
+            login:{
+                template: '#tmpl2'
+            }
+        }
+
+    })
+
+</script>
+</body>
+</html>

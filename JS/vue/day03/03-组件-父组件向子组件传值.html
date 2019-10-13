@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父组件向子组件传值</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- 父组件在引用子组件的时候通过属性绑定把需要传递给子组件的数据以属性绑定的形式传递到子组件的内部，供子组件使用-->
+    <com1 v-bind:parentmsg="msg"></com1>
+</div>
+
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'123 -父组件中的数据'
+        },
+        methods:{},
+
+        components:{
+            //子组件中默认无法访问到父组件中的data数据和methods方法
+            com1:{
+                //子组件中的data数据，并不是父组件传递过来的，而是子组件自身私有的，
+                //比如，子组件通过Ajax，请求回来的数据，都可以放在data身上
+                //data上的数据都是可读可写的
+                data(){
+                  return{
+                      title:'123',
+                      content:'qqq'
+                  }
+                },
+                //props中的数据是只读的
+                props:['parentmsg'],
+                template:'<h1>这是子组件--{{parentmsg}}</h1>'
+            }
+        }
+    })
+</script>
+</body>
+</html>
